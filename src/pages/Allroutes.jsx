@@ -5,6 +5,7 @@ import Health from "./Health";
 import Nation from "./Home";
 import Science from "./Science";
 import Sports from "./Sports";
+import Subscribe from "./subscribe";
 import Technology from "./Technology";
 
 
@@ -19,6 +20,7 @@ export default function AllRoutes(){
             <Route path="/science"  element={<Science/>} />
             <Route path="/sports"  element={<Sports/>} />
             <Route path="/technology"  element={<Technology/>} />
+            <Route path="/subscribe"  element={<Subscribe/>} />
         </Routes>
     )
 }

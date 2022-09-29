@@ -1,19 +1,24 @@
-import { Image } from "@chakra-ui/react";
+import { Button, Image } from "@chakra-ui/react";
 import { IoIosHome} from 'react-icons/io';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Dropdown from "./dropdown";
 
 export default function Navbar(){
-
+const navigate=useNavigate()
     var showdate=new Date();
     // var displaytodaydate=showdate.getDate()+"/"+(showdate.getMonth()+1)+"/"+showdate.getFullYear();
     var dt=showdate.toDateString();
      var dispalyTime=showdate.getHours()+":"+showdate.getMinutes()   //+":"+showdate.getSeconds();
 
+     const handleClick=()=>{
+      
+         return navigate("/subscribe")
+     }
+
     return (
         <div style={{width:"80%",height:"210px",margin:"auto"}}>
             <Image src="https://www.deccanchronicle.com/images/DeccanChronicle_Logo.jpg" mt={10} h={80} w={300}/>
-            <p style={{fontSize:"12px",fontWeight:"600"}}>{dt} | Last update: {dispalyTime} AM IST</p>
+            <p style={{fontSize:"12px",fontWeight:"600"}}>{dt} | Last update: {dispalyTime} AM IST</p> <div style={{marginLeft:"1000px"}}><Button w={100} h={30} bgColor={"#ffb900"} border={0} color={"black"} onClick={handleClick}>SUBSCRIBE</Button></div>
             <hr />
             <div  style={{ width:"100%",height:"40px",display:"flex",justifyContent:"flex-start",gap:"15px"}}>
                 <div style={{width:"5%"}}><Link to="/"  style={{textDecoration:"none",color:"black"}}><IoIosHome style={{fontSize:"25px",marginTop:"15%",marginLeft:"50px"}}/></Link></div>
@@ -27,7 +32,7 @@ export default function Navbar(){
                     <Link style={{textDecoration:"none",color:"black"}} to="/technology" ><h4 style={{fontWeight:"400",fontSize:"20px"}}>Technology</h4></Link>
                     <Link style={{textDecoration:"none",color:"black"}} to="/" ><h4 style={{fontWeight:"400",fontSize:"20px"}}><Dropdown/></h4></Link>
                 </div>
-            </div>
+            </div><hr/>
         </div>
     )
 }
