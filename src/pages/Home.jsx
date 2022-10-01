@@ -82,7 +82,7 @@ const COLUMN=(dispatch)=>{
     })
 }
 const SOUTH=(dispatch)=>{
-    axios.get(`https://newsapi.org/v2/top-headlines?q=pfi&pageSize=4&page=1&apiKey=737de212e6c549f8a39ce376180cc4e1`).then((res)=>{
+    axios.get(`https://newsapi.org/v2/top-headlines?q=ram&pageSize=4&page=1&apiKey=737de212e6c549f8a39ce376180cc4e1`).then((res)=>{
        // console.log(res.data.articles)
         dispatch({type:"SOUTHDATA" , payload: res.data.articles})
         
@@ -91,7 +91,7 @@ const SOUTH=(dispatch)=>{
     })
 }
 const SOUTH2=(dispatch)=>{
-    axios.get(`https://newsapi.org/v2/top-headlines?q=food&pageSize=4&page=1&apiKey=737de212e6c549f8a39ce376180cc4e1`).then((res)=>{
+    axios.get(`https://newsapi.org/v2/top-headlines?q=ram&pageSize=4&page=2&apiKey=737de212e6c549f8a39ce376180cc4e1`).then((res)=>{
        // console.log(res.data.articles)
         dispatch({type:"SOUTHDATA2" , payload: res.data.articles})
         
