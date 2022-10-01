@@ -183,7 +183,7 @@ JAPAN(dispatch)
             <div style={{marginTop:"5px"}}>
             {
                 state.nationalData?.map((el)=>(
-                    <TopStories key={el.description } title={el.title } description={el.description} image={el.urlToImage }/>
+                    <TopStories key={el.description } content={el.content} title={el.title } description={el.description} image={el.urlToImage }/>
                 ))
               }
 
@@ -194,7 +194,7 @@ JAPAN(dispatch)
             <div style={{marginLeft:"10px"}}>
                {
                 state.commonData?.map((el)=>(
-                    <MostPopular2 key={el.description } title={el.title } image={el.urlToImage }/>
+                    <MostPopular2 content={el.content} key={el.description } title={el.title } image={el.urlToImage }/>
                 ))
                }</div>
             </div>
@@ -205,7 +205,7 @@ JAPAN(dispatch)
              <div style={{marginLeft:"10px"}}>
              {
                 state.popularData?.map((el)=>(
-                    <MostPopular key={el.description } title={el.title } image={el.urlToImage } />
+                    <MostPopular content={el.content} key={el.description } title={el.title } image={el.urlToImage } />
                 ))
              }
              </div>
@@ -215,7 +215,7 @@ JAPAN(dispatch)
             <div style={{marginLeft:"10px"}}>
                 {
                     state.columnData?.map((el)=>(
-                        <Column key={el.description } title={el.title } image={el.urlToImage }/>
+                        <Column content={el.content} key={el.description } title={el.title } image={el.urlToImage }/>
                     ))
                 }
                  
@@ -241,8 +241,8 @@ JAPAN(dispatch)
        <div style={{width:"190px",height:"3px",backgroundColor:"red"}}></div>
             </div></div>
             <div style={{width:"80%",height:"350px",margin:"auto",marginTop:"15px"}}>
-                <div style={{width:"100%",height:"250px",display:"flex",justifyContent:"space-around"}}>{state.southData?.map((el)=>(<StateBigBox  key={el.description } title={el.title } image={el.urlToImage }/>))}</div>
-                <div style={{width:"100%",height:"99px",display:"flex",justifyContent:"space-around"}}>{state.southData2?.map((el)=>(<StatesmallBox key={el.description } title={el.title } image={el.urlToImage} />))}</div>
+                <div style={{width:"100%",height:"250px",display:"flex",justifyContent:"space-around"}}>{state.southData?.map((el)=>(<StateBigBox content={el.content} key={el.description } title={el.title } image={el.urlToImage }/>))}</div>
+                <div style={{width:"100%",height:"99px",display:"flex",justifyContent:"space-around"}}>{state.southData2?.map((el)=>(<StatesmallBox content={el.content} key={el.description } title={el.title } image={el.urlToImage} />))}</div>
             </div>
 
             <div style={{width:"80%",margin:"auto"}}><hr/></div>
@@ -250,7 +250,7 @@ JAPAN(dispatch)
        <div style={{display:"flex",flexDirection:"column"}}><h2 style={{textAlign:"start"}}>JOBS AND EDUCATION</h2>
        <div style={{width:"190px",height:"3px",backgroundColor:"red"}}></div>
             </div></div>
-            <div style={{width:"80%",margin:"auto",height:"100px",display:"flex",justifyContent:"space-around",marginTop:"10px"}}>{state.educationData?.map((el)=>(<StatesmallBox key={el.description } title={el.title } image={el.urlToImage} />))}</div>
+            <div style={{width:"80%",margin:"auto",height:"100px",display:"flex",justifyContent:"space-around",marginTop:"10px"}}>{state.educationData?.map((el)=>(<StatesmallBox content={el.content} key={el.description } title={el.title } image={el.urlToImage} />))}</div>
           <div style={{width:"80%",margin:"auto"}}><hr/></div>
             
             <div style={{width:"80%",margin:"auto"}}>
@@ -258,8 +258,8 @@ JAPAN(dispatch)
        <div style={{width:"190px",height:"3px",backgroundColor:"red"}}></div>
             </div></div>
             <div style={{width:"80%",height:"350px",margin:"auto",marginTop:"15px"}}>
-                <div style={{width:"100%",height:"250px",display:"flex",justifyContent:"space-around"}}>{state.footballData?.map((el)=>(<StateBigBox key={el.description } title={el.title } image={el.urlToImage }/>))}</div>
-                <div style={{width:"100%",height:"99px",display:"flex",justifyContent:"space-around"}}>{state.cricketData?.map((el)=>(<StatesmallBox key={el.description } title={el.title } image={el.urlToImage } />))}</div>
+                <div style={{width:"100%",height:"250px",display:"flex",justifyContent:"space-around"}}>{state.footballData?.map((el)=>(<StateBigBox content={el.content} key={el.description } title={el.title } image={el.urlToImage }/>))}</div>
+                <div style={{width:"100%",height:"99px",display:"flex",justifyContent:"space-around"}}>{state.cricketData?.map((el)=>(<StatesmallBox content={el.content} key={el.description } title={el.title } image={el.urlToImage } />))}</div>
             </div>
             <div style={{width:"80%",margin:"auto"}}><hr/></div>
 
@@ -268,7 +268,7 @@ JAPAN(dispatch)
        <div style={{width:"190px",height:"3px",backgroundColor:"red"}}></div>
             </div></div>
 
-            <div style={{width:"80%",height:"320px",margin:"auto",display:"flex",justifyContent:"space-around"}}>{state.technologyData?.map((el)=>(<TechnologyBox  key={el.description } description={el.description} title={el.title } image={el.urlToImage }/>))}</div>
+            <div style={{width:"80%",height:"320px",margin:"auto",display:"flex",justifyContent:"space-around"}}>{state.technologyData?.map((el)=>(<TechnologyBox content={el.content} key={el.description } description={el.description} title={el.title } image={el.urlToImage }/>))}</div>
             <div style={{width:"80%",margin:"auto"}}><hr/></div>
 
 
@@ -277,8 +277,8 @@ JAPAN(dispatch)
        <div style={{width:"190px",height:"3px",backgroundColor:"red"}}></div>
             </div></div>
             <div style={{width:"80%",height:"350px",margin:"auto",marginTop:"15px"}}>
-                <div style={{width:"100%",height:"250px",display:"flex",justifyContent:"space-around"}}>{state.worldData?.map((el)=>(<StateBigBox key={el.description } title={el.title } image={el.urlToImage }/>))}</div>
-                <div style={{width:"100%",height:"99px",display:"flex",justifyContent:"space-around"}}>{state.japanData?.map((el)=>(<StatesmallBox key={el.description } title={el.title } image={el.urlToImage } />))}</div>
+                <div style={{width:"100%",height:"250px",display:"flex",justifyContent:"space-around"}}>{state.worldData?.map((el)=>(<StateBigBox content={el.content} key={el.description } title={el.title } image={el.urlToImage }/>))}</div>
+                <div style={{width:"100%",height:"99px",display:"flex",justifyContent:"space-around"}}>{state.japanData?.map((el)=>(<StatesmallBox content={el.content} key={el.description } title={el.title } image={el.urlToImage } />))}</div>
             </div>
             <div style={{width:"80%",margin:"auto"}}><hr/></div>
 
